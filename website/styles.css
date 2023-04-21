@@ -7,22 +7,35 @@
     
 }
 
+/*center buttons div and make it's width*/
+#buttons{
+    margin: 0 auto;
+    width: 50%;
+}
+
 /*Well spaced table of times*/
 #history{
     margin: 5px auto;
-    width: 100%;
+    width: 50%;
+    min-width: 300px;
     border-collapse: collapse;
     border: 1px solid #000;
     text-align: center;
 }
 
 /*Table cells with 2px vertical padding and 6px horizontal*/
-td{
-    padding: 5px;
+td,th{
+    padding: 8px;
+    /*float text  ont eh right*/
+    text-align: right;
+    /* same width for all cols*/
+    width: 25%;
 }
 
-/*Make buytton cursor click*/
+/*Make buytton cursor click, and float center inside div*/
 button{
     padding: 6px;
     cursor: pointer;
+    float: center;
+    margin: 0 5px;
 }

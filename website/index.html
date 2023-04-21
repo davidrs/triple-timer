@@ -19,6 +19,9 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
+  <!-- import bootstrap styles-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
   <link rel="stylesheet" href="styles.css?v=1.0">
   <script type="text/javascript" 
   src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">  
@@ -27,10 +30,16 @@
   <!-- Add a 2 hour timer text and a 15min timer text div. -->
   <div id="time"></div>  
 
+  <div id="buttons"> 
+    <!-- Add a twitter bootstrap button to restsart the timer. -->
+    <button id="start"  class="">Start Feeding</button>
+  
+    <!-- button to delete all entries-->
+    <button id="delete">Delete All</button>
+  </div>
 
-  <!-- Add a button to restsart the timer. -->
-  <button id="start">Start</button>
-  <!--Div showing history of start times-->
+
+  <!--Div table showing history of start times-->
   <div id="history"></div>
 
 
