@@ -1,21 +1,28 @@
-#name{
-    font-size: 22px;
+#time{
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    margin-top: 10px;
+    
 }
 
-#answer{
-    background-color: rgba(230, 165, 165, 0.63);
+/*Well spaced table of times*/
+#history{
+    margin: 5px auto;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #000;
+    text-align: center;
 }
 
-
-#hint{
-    background-color: rgb(231, 199, 140);
+/*Table cells with 2px vertical padding and 6px horizontal*/
+td{
+    padding: 5px;
 }
 
-
-#next{
-    background-color: rgb(140, 231, 148);
-}
-
+/*Make buytton cursor click*/
 button{
     padding: 6px;
+    cursor: pointer;
 }
