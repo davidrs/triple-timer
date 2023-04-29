@@ -20,7 +20,7 @@ function render_times() {
     // Reverse Sort the previous_times list.
     previous_times.sort(function(a, b){return b-a});
     // Add the table header.
-    $("#history").append('<tr><th>Start Time</th><th>15 min end</th><th>2hr end</th></tr>');
+    $("#history").append('<tr><th>Start Time</th><th>15 min end</th><th>2hr end</th><th> </th></tr>');
     // Add the table rows.
     for (let i = 0; i < previous_times.length; i++) {
         let date = new Date(previous_times[i]);
@@ -39,7 +39,19 @@ function render_times() {
             }
         }   
 
-        $("#history").append('<tr><td>' + date_string + ' ' + time_string + '</td><td>' + fifteen_min_end_string + '</td><td>' + two_hr_end_string + '</td></tr>');
+        //include a column with a delete buytton to remove that ebntry from the list of previous_times.
+        $("#history").append('<tr><td>' + date_string + ' ' + time_string + '</td><td>' + fifteen_min_end_string + '</td><td>' + two_hr_end_string +    '</td><td><button class="delete" id="delete' + i + '">x</button></td></tr>');  
+        // Add a click handler to the delete button.
+        $("#delete" + i).click(function() {
+            // Remove the time from the list.
+            previous_times.splice(i, 1);
+            // Save the list to local storage.
+            localStorage.setItem('previous_times', JSON.stringify(previous_times));
+            // Re-render the table.
+            render_times();
+        }
+        );  
+
     }
 
 }

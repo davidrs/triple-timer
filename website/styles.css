@@ -39,3 +39,24 @@ button{
     float: center;
     margin: 0 5px;
 }
+
+/*Class delete for small red button, invert colours on hover*/
+.delete{
+    background-color: #f00;
+    color: #fff;
+    font-size: 12px;
+    padding: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+.delete:hover{
+    background-color: #000000;
+    color: #f00;
+}
+
+/*cool  background color for the body*/
+body{
+    background-color: #f0f0f0;
+}
